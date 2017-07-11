@@ -17,3 +17,10 @@
     100% {background-color:red; left:0px; top:0px;}
 }
 
+
+.tabcontent{
+    color:white;
+    background-color:#2196F3; 
+    padding:50px;
+    text-align:center;
+}

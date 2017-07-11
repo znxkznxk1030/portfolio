@@ -2,13 +2,17 @@
     height: 100%;
     width: 0; /* change this with javascript */
     position: fixed;
-    z-index: 1; /* Stay on top */
+    z-index: 9999; /* Stay on top */
     top: 0;
-    left: 0;
+    left: 80px;
     background-color: #111; /* black */
     overflow-x: hidden; /* disable horizonal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the side nav */
+}
+
+.open-nav{
+    width:250px;
 }
 
 /* The navigation menu links */
@@ -29,6 +33,7 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn{
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 25px;
     font-size: 36px;
@@ -38,11 +43,36 @@
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main{
     transition: margin-left .5s;
-    padding: 20px;
+}
+
+
+.open{
+    margin-left:250px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-length: 450px){
     .sidenav {padding-top:15px;}
     .sidenav a {font-size: 18px;}
+}
+
+/* The button control side bar navigation menu link */
+.nav{
+    width: 80px;
+    height: 100vh;
+    background-color: #111;
+    position: fixed;
+    z-index: 9999;
+    border-right: 2px solid #111;
+}
+
+/* The logo menu */
+.logo-menu {
+    cursor: pointer;
+    display: block;
+    margin: 47vh 0;
+    margin-top: 47vh;
+    margin-right: 0px;
+    margin-bottom: 47vh;
+    margin-left: 0px;
 }

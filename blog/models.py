@@ -6,9 +6,11 @@ from django.core.urlresolvers import reverse
 # Create your models here.
 
 class Posts(models.Model):
-    category = models.ForeignKey(Category, models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,
+                                related_name="posts")
     title = models.CharField('TITLE', max_length=50)
-    slug = models.SlugField('SLUG', unique=True, allow_unicode=True, null=True,
+    slug = models.SlugField('SLUG', unique=True, allow_unicode=True, 
+            null=True,
             help_text='one word for title alias')
     description = models.CharField('DESCRIPTION', max_length=500, 
         default='Nothing', blank=True, help_text='simple description text.')

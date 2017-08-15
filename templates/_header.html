@@ -5,8 +5,12 @@
 </div>
 <div id="sidebar" class="sidenav">
 	{% if categories %}
-	{% for title in categories %}
-	<a href="#"> {{ title.title }} </a>
+
+	{% for category in categories %}
+	<a> {{ category.title }} </a>
+		{% for post in category.posts.all %}
+			<a> {{ post.title }} </a>
+		{% endfor %}
 	{% endfor %}
 	{% endif %}
 </div>

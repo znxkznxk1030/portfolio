@@ -7,6 +7,5 @@ def home(request):
     return render(
             request,
             'index.html',
-            {'categories' : Category.objects.all(),
-                'blogs' : Posts.objects.all()},
+            {'categories' : Category.objects.all()}
             )

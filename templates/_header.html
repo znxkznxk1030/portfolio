@@ -4,13 +4,20 @@
     </div>
 </div>
 <div id="sidebar" class="sidenav">
-	{% if categories %}
-
+	{% if categories %}	
 	{% for category in categories %}
-	<a> {{ category.title }} </a>
-		{% for post in category.posts.all %}
-			<a> {{ post.title }} </a>
-		{% endfor %}
+	<div class="dropdown" onmouseover="openPosts({{ category.title }})"
+				onmouseout="closePosts({{ category.title }})">
+		<h2 class="dropbtn">
+			<a href="#"> {{ category.title }} </a>
+		</h2>
+		<div class="dropdown-content" id="{{ category.title }}">
+			{% for post in category.posts.all %}
+				<h3><a href="#"> {{ post.title }} </a></h3>
+			{% endfor %}
+		</div>
+	</div>
 	{% endfor %}
 	{% endif %}
 </div>
+

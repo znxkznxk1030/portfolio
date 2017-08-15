@@ -76,3 +76,30 @@
     margin-bottom: 47vh;
     margin-left: 0px;
 }
+
+.dropbtn {
+	color: #000;
+}
+
+.dropdown {
+
+}
+
+.dropdown-content {
+	display: none;
+}
+
+.dropdown-content a {
+
+}
+
+.dropdown-content a:hover {
+
+}
+
+.dropdown:hover .dropdown-content {
+}
+
+.dropdown:hover .dropbtn{
+
+}

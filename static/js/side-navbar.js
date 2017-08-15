@@ -15,3 +15,10 @@ btn.addEventListener('click', function(){
     }
 );
 
+function openPosts(category){
+	category.style.display="block";
+}
+
+function closePosts(category){
+	category.style.display="none";
+}

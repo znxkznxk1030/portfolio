@@ -13,6 +13,7 @@ class CategoryListView(View):
                 request,
                 'category/list.html',
                 context={
+                    'seleted_category_slug': kwargs['slug'],
                     'categories': Category.objects.all(),
                     'posts': Posts.objects.filter(category=category_set),
                     }

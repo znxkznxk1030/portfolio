@@ -15,6 +15,11 @@ btn.addEventListener('click', function(){
     }
 );
 
+$(document).ready(function(){
+        $('.sidenav').toggleClass('open-nav');
+        $('#main').toggleClass('open');
+});
+
 function openPosts(category){
 	category.style.display="block";
 }

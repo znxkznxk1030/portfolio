@@ -9,7 +9,11 @@
 	<div class="dropdown" onmouseover="openPosts({{ category.title }})"
 				onmouseout="closePosts({{ category.title }})">
 		<h2 class="dropbtn">
-			<a href="{{ category.get_absolute_url }}" >
+			<a href="{{ category.get_absolute_url }}" 
+			{% if seleted_category_slug == category.slug %}
+			style="background-color:powderblue;"
+			{% endif %}
+			>
 				 {{ category.title }} </a>
 		</h2>
 		<div class="dropdown-content" id="{{ category.title }}">

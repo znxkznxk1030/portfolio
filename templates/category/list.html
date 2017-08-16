@@ -7,8 +7,8 @@
 <body>
 {% block content %}
 	<div class="tabcontent">
-		{% for category in posts %}
-			<a href="#">{{ category.title }}</a>
+		{% for post in posts %}
+			<a href="#">{{ post.title }}</a>
 		{% endfor %}
 	</div>
 {% endblock %}

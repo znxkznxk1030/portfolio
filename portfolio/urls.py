@@ -22,4 +22,6 @@ from .views import home
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
+
+    url(r'^category/', include('category.urls', namespace='category')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

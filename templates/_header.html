@@ -9,11 +9,12 @@
 	<div class="dropdown" onmouseover="openPosts({{ category.title }})"
 				onmouseout="closePosts({{ category.title }})">
 		<h2 class="dropbtn">
-			<a href="#"> {{ category.title }} </a>
+			<a href="{{ category.get_absolute_url }}" >
+				 {{ category.title }} </a>
 		</h2>
 		<div class="dropdown-content" id="{{ category.title }}">
 			{% for post in category.posts.all %}
-				<h3><a href="#"> {{ post.title }} </a></h3>
+				<h4>{{ post.title }} </h4>
 			{% endfor %}
 		</div>
 	</div>

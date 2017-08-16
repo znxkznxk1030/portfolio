@@ -26,9 +26,10 @@ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/
 </head>
 <body>
     <header>{% include "_header.html"%}</header>
-    {% block content %}
-    {% endblock content %}
-
+	<div id="main">
+	    {% block content %}
+	    {% endblock content %}
+	</div>
     <footer>{% include "_footer.html" %}</footer>
 
 <script type="text/javascript" src="{% static "js/side-navbar.js" %}"></script>

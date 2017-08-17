@@ -4,8 +4,6 @@ from django.shortcuts import render
 from category.models import Category
 from blog.models import Posts
 
-import markdown
-
 from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter

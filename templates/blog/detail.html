@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load markdownify %}
 <head>
 {% block title %}Post{% endblock %}
 {% block stylesheet %}
-<link rel="stylesheet" type="text/css" href="{% static "css/category_list.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/blog_detail.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/code-highlight/native.css" %}">
 {% endblock %}
 </head>
 <body>
 {% block content %}
-	<div class="category-list">
-		<p class="post-title">{{ post.title }}</p>
-		<p class="post-title">{{ post.slug }}</p>
-		<p class="post-title">{{ post.description }}</p>
-		<p class="post-title">{{ post.content }}</p>
-		<p class="post-title">{{ post.create_date }}</p>
-		<p class="post-title">{{ post.modify_date }}</p>
+	<div class="attributes">
+		<p class="attribute title">{{ post.title }}</p>
+		<p class="attribute">{{ post.slug }}</p>
+		<p class="attribute">{{ post.description }}</p>
 	</div>
+	<div class="main-content">
+		{{ post.content | markdown | safe }}
+	</div>
+		<p class="attribute">{{ post.create_date }}</p>
+		<p class="attribute">{{ post.modify_date }}</p>
 {% endblock %}
 </body>

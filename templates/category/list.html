@@ -9,9 +9,10 @@
 </head>
 <body>
 {% block content %}
-	<div class="categorylist">
+	<div class="category-list">
 		{% for post in posts %}
-			<a href={{ post.get_absolute_url }} class="posttitle">{{ post.title }}</a>
+			<a href={{ post.get_absolute_url }} class="post-title">
+			{{ post.title }}</a>
 		{% endfor %}
 	</div>
 {% endblock %}

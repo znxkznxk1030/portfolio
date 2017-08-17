@@ -9,13 +9,13 @@
 </head>
 <body>
 {% block content %}
-<div class="categorylist">
-	<a class="posttitle">{{ post.title }}</a>
-	<h1 class="posttitle">{{ post.slug }}</h1>
-	<h1 class="posttitle">{{ post.description }}</h1>
-	<h1 class="posttitle">{{ post.content }}</h1>
-	<h1 class="posttitle">{{ post.create_date }}</h1>
-	<h1 class="posttitle">{{ post.modify_date }}</h1>
-</div>
+	<div class="category-list">
+		<p class="post-title">{{ post.title }}</p>
+		<p class="post-title">{{ post.slug }}</p>
+		<p class="post-title">{{ post.description }}</p>
+		<p class="post-title">{{ post.content }}</p>
+		<p class="post-title">{{ post.create_date }}</p>
+		<p class="post-title">{{ post.modify_date }}</p>
+	</div>
 {% endblock %}
 </body>

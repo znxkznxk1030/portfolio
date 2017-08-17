@@ -12,6 +12,6 @@ class BlogDetailView(View):
                 'blog/detail.html',
                 context={
                     'categories': Category.objects.all(),
-                    'post':Posts.objects.filter(slug=kwargs['blog_slug']),
+                    'post':Posts.objects.get(slug=kwargs['blog_slug']),
                     }
                 )

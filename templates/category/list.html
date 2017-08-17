@@ -3,12 +3,14 @@
 {% load staticfiles %}
 <head>
 {% block title %}Category{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/category_list.css" %}">{% endblock %}
 </head>
 <body>
 {% block content %}
-	<div class="tabcontent">
+	<div class="categorylist">
 		{% for post in posts %}
-			<a href="#">{{ post.title }}</a>
+			<p class="posttitle">{{ post.title }}</p>
 		{% endfor %}
 	</div>
 {% endblock %}

@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import home
+from category.views.list import CategoryListView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
-
-    url(r'^category/', include('category.urls', namespace='category')),
+    url(r'^(?P<slug>[-\w]+)/$', CategoryListView.as_view(), name='category_list'),
+    url(r'^(?P<category_slug>[-\w]+)/', include('blog.urls', namespace='blog')),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

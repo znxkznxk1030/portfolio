@@ -18,4 +18,4 @@ class Category(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('category:list', args=(self.slug,))
+        return reverse('category_list', args=(self.slug,))

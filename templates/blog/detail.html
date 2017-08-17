@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+<head>
+{% block title %}Post{% endblock %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static "css/category_list.css" %}">
+{% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="categorylist">
+	<a class="posttitle">{{ post.title }}</a>
+	<h1 class="posttitle">{{ post.slug }}</h1>
+	<h1 class="posttitle">{{ post.description }}</h1>
+	<h1 class="posttitle">{{ post.content }}</h1>
+	<h1 class="posttitle">{{ post.create_date }}</h1>
+	<h1 class="posttitle">{{ post.modify_date }}</h1>
+</div>
+{% endblock %}
+</body>

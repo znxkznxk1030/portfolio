@@ -4,16 +4,14 @@ from django.shortcuts import render
 from category.models import Category
 from blog.models import Posts
 
-class CategoryListView(View):
+class BlogDetailView(View):
     def get(self, request, *args, **kwargs):
-        category_set = Category.objects.filter(slug=kwargs['slug'])
-
+        print(Posts.objects.filter(slug=kwargs['blog_slug']))        
         return render(
                 request,
-                'category/list.html',
+                'blog/detail.html',
                 context={
-                    'seleted_category_slug': kwargs['slug'],
                     'categories': Category.objects.all(),
-                    'posts': Posts.objects.filter(category=category_set),
+                    'post':Posts.objects.filter(slug=kwargs['blog_slug']),
                     }
                 )

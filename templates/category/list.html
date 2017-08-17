@@ -11,7 +11,7 @@
 {% block content %}
 	<div class="categorylist">
 		{% for post in posts %}
-			<p class="posttitle">{{ post.title }}</p>
+			<a href={{ post.get_absolute_url }} class="posttitle">{{ post.title }}</a>
 		{% endfor %}
 	</div>
 {% endblock %}

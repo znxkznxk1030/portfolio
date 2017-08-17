@@ -12,6 +12,13 @@ btn=document.querySelector('.logo-menu');
 btn.addEventListener('click', function(){
         $('.sidenav').toggleClass('open-nav');
         $('#main').toggleClass('open');
+	if($('.sidenav').hasClass('open-nav')){
+		$('#left-arrow').css("display", "block");
+		$('#right-arrow').css("display", "none");	
+	}else{
+		$('#left-arrow').css("display", "none");
+		$('#right-arrow').css("display", "block");
+	}
     }
 );
 

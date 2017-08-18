@@ -9,6 +9,9 @@
 </head>
 {% block content %}
 	<div class="category-list">
+		<a href="{% url 'blog:post_new' %}">
+			<span class="glyphicon glyphicon-plus"/>
+		</a>
 	</div>
 	<div class="category-list">
 		{% for post in posts %}

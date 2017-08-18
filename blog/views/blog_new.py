@@ -1,18 +1,17 @@
-from django.views.generic.base import View
 from django.shortcuts import render
+from django.views.generic.base import View
+
 
 from category.models import Category
 from blog.models import Posts
 
-class BlogDetailView(View):
+class BlogNewView(View):
     def get(self, request, *args, **kwargs):
-        post = Posts.objects.get(slug=kwargs['blog_slug'])
-        print(post)
+
         return render(
                 request,
-                'blog/detail.html',
+                'blog/new.html',
                 context={
                     'categories': Category.objects.all(),
-                    'post': post,
                     }
                 )

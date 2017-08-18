@@ -7,8 +7,9 @@
 <link rel="stylesheet" type="text/css" href="{% static "css/category_list.css" %}">
 {% endblock %}
 </head>
-<body>
 {% block content %}
+	<div class="category-list">
+	</div>
 	<div class="category-list">
 		{% for post in posts %}
 			<a href={{ post.get_absolute_url }} class="post-title">
@@ -16,4 +17,3 @@
 		{% endfor %}
 	</div>
 {% endblock %}
-</body>

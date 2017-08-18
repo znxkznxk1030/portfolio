@@ -22,12 +22,12 @@
 	<div class="dropdown" onmouseover="openPosts({{ category.title }})"
 				onmouseout="closePosts({{ category.title }})">
 		<h2 class="dropbtn">
-			<a href="{{ category.get_absolute_url }}" 
-			{% if seleted_category_slug == category.slug %}
+			<a href="{% url 'category:list' category_pk=category.id %}" 
+			{% if seleted_category_pk == category.id %}
 			style="background-color:powderblue;"
 			{% endif %}
 			>
-				 {{ category.title }} </a>
+			 {{ category.title }} </a>
 		</h2>
 		<div class="dropdown-content" id="{{ category.title }}">
 			{% for post in category.posts.all %}

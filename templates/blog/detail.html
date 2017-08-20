@@ -12,7 +12,11 @@
 <body>
 {% block content %}
 	<div class="attributes">
-        <img src="{{ post.image_url }}" alt="">
+        {% with "facebook" as service %}
+        <a href="http://www.facebook.com/share.php?u={{ host }}{{ page_url }}&amp;t={{ post.title }}" target="_blank" title="{{ post.title }}">
+            <img src="{{ post.image_url }}" alt="">
+            </a>
+        {% endwith %}
 		<p class="attribute title">{{ post.title }}</p>
 		<p class="attribute">{{ post.slug }}</p>
 		<p class="attribute">{{ post.description }}</p>

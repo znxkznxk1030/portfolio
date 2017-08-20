@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^category/', include('category.urls', namespace='category')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
-    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

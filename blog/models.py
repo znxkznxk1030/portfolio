@@ -12,6 +12,7 @@ class Posts(models.Model):
     slug = models.SlugField('SLUG', unique=True, allow_unicode=True, 
             null=True,
             help_text='one word for title alias')
+    image = models.ImageField(null=True, blank=True)
     description = models.CharField('DESCRIPTION', max_length=500, 
         default='Nothing', blank=True, help_text='simple description text.')
     content = models.TextField('CONTENT', default='Nothing')
@@ -35,3 +36,10 @@ class Posts(models.Model):
 
     def get_next_post(self):
         return self.get_next_by_modify_date()
+
+    @property
+    def image_url(self):
+        if self.image:
+            return self.image.url
+        return 'http://placehole.it/350x150'
+

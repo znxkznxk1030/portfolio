@@ -1,0 +1,20 @@
+.category-title{
+	color:black;
+	background-color:E6D88E;
+	padding:50px;
+	text-align:center;
+	font-size:50px;
+}
+
+.category-list{
+	text-align:center;
+}
+
+.post-title{
+	color:#505089;
+	background-color:#83C0C4;
+	text-align:center;
+	font-family:Fantasy;
+	font-size:300%;
+	font-weight:bold;
+}

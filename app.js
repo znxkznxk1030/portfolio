@@ -61,6 +61,8 @@ setInterval(() => {
   if (wave != null) {
     referHeight = innerHeight - (innerHeight * progress) * 3 - heightPadding;
   }
+
+  wave = new Wave();
 }, 300);
 
 

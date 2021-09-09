@@ -140,7 +140,6 @@ class Wave {
       const point = new Point(this.gap * index, index);
       this.points.push(point);
     }
-    console.log(this.points);
   }
 
   resizeHeight(height) {
@@ -188,7 +187,9 @@ class Wave {
 
 // Implementation
 let wave = null;
+
 function init() {
+  wave = null;
   wave = new Wave();
 }
 

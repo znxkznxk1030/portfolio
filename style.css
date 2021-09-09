@@ -334,15 +334,15 @@ section {
 
 @keyframes floating {
   0% {
-    transform: translateY(-5%) rotate(5deg);
+    transform: translateY(-10%) rotate(5deg);
   }
 
   50% {
-    transform: translateY(5%) rotate(-5deg);
+    transform: translateY(0%) rotate(-5deg);
   }
 
   100% {
-    transform: translateY(-5%) rotate(5deg);
+    transform: translateY(-10%) rotate(5deg);
   }
 }
 

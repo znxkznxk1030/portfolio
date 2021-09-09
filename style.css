@@ -93,6 +93,7 @@ img{
   font-size: var(--h2-font-size);
   color: var(--first-color);
   margin-top: var(--mb-2);
+  margin-bottom: var(--mb-2);
   text-align: center;
 }
 
@@ -140,6 +141,7 @@ section {
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
+
 
 /* Desktop */
 @media screen and (min-width: 769px) {
@@ -270,6 +272,7 @@ section {
   align-self: center;
   margin-left: var(--mb-5);
   margin-right: var(--mb-2);
+  user-select: none;
 }
 
 .home__title {
@@ -319,6 +322,28 @@ section {
   position: absolute;
   bottom: 0rem;
   right: 1rem;
+  cursor: pointer;
+}
+
+.about-img {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(-5%) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(5%) rotate(-5deg);
+  }
+
+  100% {
+    transform: translateY(-5%) rotate(5deg);
+  }
 }
 
 :root {
@@ -427,7 +452,7 @@ section {
 }
 
 .skills__data:hover {
-  transform: translateX(-15%);
+  transform: translateX(-5%);
 }
 
 

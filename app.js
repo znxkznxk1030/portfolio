@@ -50,7 +50,8 @@ const t1 = gsap
 
 t1.from('.home__image--snorkel', { opacity: 0, top: '-120px' }, 'target-point');
 t1.from('.home__bubble-container', { opacity: 0 }, 'target-point');
-t1.to('.home__title--A', { color: "#fff" });
+t1.to('.home__title--A', { color: "#fff" }, "late-point");
+t1.to('.home__image', { transform: "scale(1.3)" }, "late-point");
 // t1.from('.home__image--gold', { opacity: 0, left: '-150px' }, 'target-point');
 
 // css로 처리할 수 없는 에니메이션 처리
@@ -58,10 +59,16 @@ const heightPadding = 0;
 setInterval(() => {
   // console.log(progress);
   if (wave != null) {
-    referHeight = innerHeight - (innerHeight * progress) - heightPadding;
+    referHeight = innerHeight - (innerHeight * progress) * 3 - heightPadding;
   }
-}, 100);
+}, 300);
 
+
+const arthurImg = document.getElementById('arthur-pic');
+
+arthurImg.addEventListener('click', () => {
+  window.location.href = "https://github.com/znxkznxk1030";
+})
 
 
 
@@ -119,6 +126,9 @@ class Point {
 class Wave {
   constructor() {
     this.numPoints = 7;
+    if (innerWidth < 700) {
+      this.numPoints = 4;
+    }
     this.gap = innerWidth / (this.numPoints - 1);
     this.init();
   }

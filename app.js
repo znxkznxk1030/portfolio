@@ -51,7 +51,9 @@ const t1 = gsap
 t1.from('.home__image--snorkel', { opacity: 0, top: '-120px' }, 'target-point');
 t1.from('.home__bubble-container', { opacity: 0 }, 'target-point');
 t1.to('.home__title--A', { color: "#fff" }, "late-point");
-t1.to('.home__image', { transform: "scale(1.3)" }, "late-point");
+if (innerWidth > 700) {
+  t1.to('.home__image', { transform: "scale(1.3)" }, "late-point");
+}
 // t1.from('.home__image--gold', { opacity: 0, left: '-150px' }, 'target-point');
 
 // css로 처리할 수 없는 에니메이션 처리
@@ -62,7 +64,7 @@ setInterval(() => {
     referHeight = innerHeight - (innerHeight * progress) * 3 - heightPadding;
   }
 
-}, 300);
+}, 50);
 
 
 const arthurImg = document.getElementById('arthur-pic');

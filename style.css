@@ -423,6 +423,7 @@ section {
 
 .skills {
   height: auto;
+  min-height: 100vh;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }

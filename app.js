@@ -43,10 +43,11 @@ const t1 = gsap
         progress = self.progress;
       },
       pin: true,
-      // scrub: true,
+      scrub: true,
     },
   })
-  .addLabel('target-point');
+  .addLabel('target-point')
+  .addLabel('late-point')
 
 t1.from('.home__image--snorkel', { opacity: 0, top: '-120px' }, 'target-point');
 t1.from('.home__bubble-container', { opacity: 0 }, 'target-point');

@@ -43,7 +43,7 @@ const t1 = gsap
         progress = self.progress;
       },
       pin: true,
-      scrub: true,
+      // scrub: true,
     },
   })
   .addLabel('target-point');
@@ -93,7 +93,6 @@ canvas.height = innerHeight;
 window.addEventListener('resize', () => {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
-
   init();
   animate();
 });
@@ -192,13 +191,18 @@ let wave = null;
 
 function init() {
   wave = null;
+  if (animationFrame != null) {
+    cancelAnimationFrame(animationFrame)
+  }
+
   wave = new Wave();
 }
 
 // Animation Loop
 let keyframe = 0;
+let animationFrame = null
 function animate() {
-  requestAnimationFrame(animate);
+  animationFrame = requestAnimationFrame(animate);
   if (++keyframe < 3 ) return
   keyframe = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);

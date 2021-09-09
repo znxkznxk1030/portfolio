@@ -62,7 +62,6 @@ setInterval(() => {
     referHeight = innerHeight - (innerHeight * progress) * 3 - heightPadding;
   }
 
-  // wave = new Wave();
 }, 300);
 
 
@@ -203,8 +202,8 @@ let keyframe = 0;
 let animationFrame = null
 function animate() {
   animationFrame = requestAnimationFrame(animate);
-  if (++keyframe < 3 ) return
-  keyframe = 0;
+  // if (++keyframe < 3 ) return
+  // keyframe = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   wave.draw();
 }

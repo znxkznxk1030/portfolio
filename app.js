@@ -49,7 +49,7 @@ const t1 = gsap
   .addLabel('target-point');
 
 t1.from('.home__image--snorkel', { opacity: 0, top: '-120px' }, 'target-point');
-t1.from('.home__bubble-container', { opacity: 0}, 'target-point');
+t1.from('.home__bubble-container', { opacity: 0 }, 'target-point');
 t1.to('.home__title--A', { color: "#fff" });
 // t1.from('.home__image--gold', { opacity: 0, left: '-150px' }, 'target-point');
 
@@ -81,13 +81,21 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 // Event Listeners
-addEventListener('resize', () => {
+window.addEventListener('resize', () => {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
 
   init();
   animate();
 });
+
+window.onload = () => {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+
+  init();
+  animate();
+};
 
 // Objects
 let referHeight = innerHeight * 0.9;
@@ -147,8 +155,8 @@ class Wave {
       const currY = point.y;
       point.update();
 
-      midX = ( prevX + currX ) / 2;
-      midY = ( prevY + currY ) / 2;
+      midX = (prevX + currX) / 2;
+      midY = (prevY + currY) / 2;
 
       ctx.quadraticCurveTo(prevX, prevY, midX, midY);
 
@@ -157,7 +165,7 @@ class Wave {
     }
 
     ctx.quadraticCurveTo(midX, midY, prevX, prevY);
-    
+
     ctx.lineTo(prevX, innerHeight);
     ctx.lineTo(0, innerHeight);
     ctx.fill();
@@ -175,8 +183,11 @@ function init() {
 }
 
 // Animation Loop
+let keyframe = 0;
 function animate() {
   requestAnimationFrame(animate);
+  if (++keyframe < 3 ) return
+  keyframe = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   wave.draw();
 }

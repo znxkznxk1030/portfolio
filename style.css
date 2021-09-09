@@ -317,7 +317,7 @@ section {
 
 .home__image {
   position: absolute;
-  bottom: 3rem;
+  bottom: 1rem;
   right: 1rem;
 }
 
@@ -344,7 +344,6 @@ section {
   top: 135px;
   transform: rotate(-3deg);
 }
-
 
 
 .button {
@@ -398,7 +397,7 @@ section {
 /* ====== Skills ====== */
 
 .skills {
-  height: calc(100vh - 3rem);
+  height: auto;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
@@ -424,7 +423,13 @@ section {
   box-shadow: 5px 5px 10px #00000059;
   color: #0e2431;
   margin: 1rem auto;
+  transition: transform .2s ease;
 }
+
+.skills__data:hover {
+  transform: translateX(-15%);
+}
+
 
 .skills__names {
   display: flex;
@@ -453,19 +458,41 @@ section {
 }
 
 .skills__bar--javascript {
-  width: 90%;
+  width: 75%;
 }
 
-.skills__bar--react {
+.skills__bar--vuejs {
   width: 70%;
 }
 
+.skills__bar--react {
+  width: 50%;
+}
+
 .skills__bar--spring-boot{
+  width: 40%;
+}
+
+.skills__bar--nodejs {
+  width: 50%;
+}
+
+.skills__bar--haskell {
+  width: 20%;
+}
+
+.skills__bar--spring-boot {
   width: 60%;
 }
 
+.bxl-haskell {
+  width: 2rem;
+  height: auto;
+  background: url(./img/64px-Haskell-Logo.svg.png) no-repeat center center/cover;
+}
+
 @media screen and (min-width: 901px) {
-  .skills__data  {
+  .skills__data, .skills__text {
     max-width: 550px;
   }
 }

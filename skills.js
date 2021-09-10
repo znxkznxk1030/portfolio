@@ -4,10 +4,10 @@ const t2 = gsap
     .timeline({
         scrollTrigger: {
             trigger: '.skills',
-            start: '30% center',
+            start: '40% center',
             end: 'center center',
-            markers: true,
+            // markers: true,
         },
     })
 
-t2.from('.skills__data', { opacity: 0, "margin-top": "-50px", transition: "all .2s ease-in", stagger: 0.2 });
+t2.from('.skills__data', { opacity: 0, "margin-top": "-50px", transition: "all .2s ease-in", stagger: 0.15 });

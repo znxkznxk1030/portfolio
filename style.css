@@ -586,11 +586,11 @@ section {
 .works__link {
   display: inline-block;
   color: #fff;
-  font-size: .85rem;
-  margin-top: 5px;
+  font-size: .75rem;
+  margin-top: 13px;
   padding: 5px;
   border: var(--first-color) solid 3px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .works__link:hover {

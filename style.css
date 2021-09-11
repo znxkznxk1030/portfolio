@@ -535,22 +535,30 @@ section {
 
 .works__container {
   width: 90%;
-  max-width: 420px;
+  max-width: 430px;
 }
 
 .works__data {
   width: 100%;
-  height: 230px;
+  height: 280px;
   position: relative;
   margin: 1rem 0;
 }
 
 .works__image {
   width: 100%;
-  height: 230px;
+  height: 280px;
   border-radius: 5px;
   position: relative;
   box-shadow: 5px 4px 5px rgba(0, 0, 0, .5);
+}
+
+.works__image--cellobpo {
+  background: url(./img/cellobpo.PNG) no-repeat center center/cover;
+}
+
+.works__image--rapidcello {
+  background: url(./img/rapidcello.PNG) no-repeat center center/cover;
 }
 
 .works__image--canvasdojo {
@@ -561,10 +569,14 @@ section {
   background: url(./img/great-award.PNG) no-repeat center center/cover;
 }
 
+.works__image--haskell {
+  background: url(./img/haskell-tetris.PNG) no-repeat center center/cover;
+}
+
 .works__info {
   position: absolute;
   width: 100%;
-  height: 230px;
+  height: 280px;
   top: 0;
   right: 0;
   background: var(--second-color);
@@ -579,7 +591,7 @@ section {
 
 .works__info h3 {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 1.5rem 0;
   color: var(--third-color);
 }
 
@@ -587,7 +599,7 @@ section {
   display: inline-block;
   color: #fff;
   font-size: .75rem;
-  margin-top: 13px;
+  margin-top: 23px;
   padding: 5px;
   border: var(--first-color) solid 3px;
   border-radius: 20px;
@@ -598,11 +610,22 @@ section {
 }
 
 @media screen and (min-width: 901px) {
+  .works__data:nth-child(even) {
+    transform: translateX(13%);
+  }
+  .works__data:nth-child(odd) {
+    transform: translateX(-13%);
+  }
   .works__image {
     /* width: 60%; */
     position: relative;
     cursor: pointer;
   }
+
+  .works__image--cellobpo, .works__image--haskell {
+    cursor: default;
+  }
+
   .works__image::after {
     content: '';
     width: 100%;
@@ -611,32 +634,33 @@ section {
     top: 0;
     left: 0;
     background: var(--first-color);
-    opacity: .4;
+    opacity: .6;
     transform-origin: right;
     transition: all .5s ease-in-out;
+    border-radius: 3px;
   }
-
   .works__image:hover::after {
     transform: scaleX(0);
   }
-
   .works__info {
     position: absolute;
-    width: 310px;
+    width: 340px;
     height: 150px;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
-    right: -40%;
+    right: -50%;
     background: var(--second-color);
     border-radius: 10px;
     color: #fff;
-    opacity: 1;
+    opacity: .9;
     box-shadow: 5px 4px 5px rgba(0, 0, 0, .5);
     padding: 0px;
   }
-
   .works__info h3 {
     margin: .5rem 0 0 0;
+  }
+  .works__link {
+    margin-top: 12px;
   }
 }
 

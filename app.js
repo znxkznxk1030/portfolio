@@ -55,6 +55,7 @@ t1.to('.home__title--A', { color: "#fff" }, "late-point");
 if (innerWidth > 700) {
   t1.to('.home__image', { transform: "scale(1.3)" }, "late-point");
 }
+t1.to('.float__progress-wrap', { opacity: 0 })
 // t1.from('.home__image--gold', { opacity: 0, left: '-150px' }, 'target-point');
 
 // css로 처리할 수 없는 에니메이션 처리

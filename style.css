@@ -512,6 +512,7 @@ section {
   color: #0e2431;
   margin: 1rem auto;
   transition: transform .2s ease;
+  background-color: #fff;
 }
 
 .skills__data:hover {

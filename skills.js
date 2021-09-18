@@ -4,7 +4,7 @@ const t2 = gsap
     .timeline({
         scrollTrigger: {
             trigger: '.skills',
-            start: '40% center',
+            start: '30% center',
             end: 'center center',
             // markers: true,
         },

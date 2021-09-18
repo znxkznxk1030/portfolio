@@ -615,7 +615,7 @@ section {
 
 .works__container {
   width: 90%;
-  max-width: 430px;
+  max-width: 540px;
 }
 
 .works__data {
@@ -690,14 +690,19 @@ section {
 }
 
 @media screen and (min-width: 901px) {
+  .works__data {
+    margin: 3rem 0;
+    height: 340px;
+  }
   .works__data:nth-child(even) {
-    transform: translateX(13%);
+    transform: translateX(23%);
   }
   .works__data:nth-child(odd) {
-    transform: translateX(-13%);
+    transform: translateX(-23%);
   }
   .works__image {
     /* width: 60%; */
+    height: 340px;
     position: relative;
     cursor: pointer;
   }
@@ -726,9 +731,9 @@ section {
     position: absolute;
     width: 340px;
     height: 150px;
-    top: 40%;
+    top: 39%;
     transform: translateY(-50%);
-    right: -50%;
+    right: -45%;
     background: var(--second-color);
     border-radius: 10px;
     color: #fff;

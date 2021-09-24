@@ -24,7 +24,6 @@ const t2 = gsap
             trigger: '.works',
             start: 'top center',
             end: 'center center',
-            markers: true,
         },
     })
 

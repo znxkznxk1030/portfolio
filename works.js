@@ -16,3 +16,16 @@ const elRapidCello = document.getElementById('work-rapidcello')
 elRapidCello.addEventListener('click', e => {
     window.location.href = 'https://www.cellorapid.com/cello/web/login.html'
 })
+
+
+const t2 = gsap
+    .timeline({
+        scrollTrigger: {
+            trigger: '.works',
+            start: 'top center',
+            end: 'center center',
+            markers: true,
+        },
+    })
+
+t2.from('.works__background', {transform: "scale(1.5)"})

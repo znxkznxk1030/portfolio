@@ -520,9 +520,10 @@ section {
   padding-left: var(--mb-2);
   padding-right: var(--mb-2);
   position: relative;
+  overflow: hidden;
 }
 
-.skills::before {
+/* .skills::before {
   content: '';
   background: url(img/skill-1.png) no-repeat center center/cover;
   position: absolute;
@@ -531,6 +532,17 @@ section {
   width: 100%;
   height: 100%;
   opacity: 0.08;
+} */
+
+.skills__background {
+  background: url(img/skill-1.png) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.12;
+  overflow: hidden;
 }
 
 
@@ -632,22 +644,26 @@ section {
 
 /* ====== Works ====== */
 
-.works {
+/* .works {
   height: auto;
   min-height: 100vh;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
-}
+} */
 
 .works {
+  height: auto;
+  min-height: 100vh;
   text-align: center;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.works::before {
+/* .works::before {
   content: '';
   background: url(img/work-1.jpeg) no-repeat center center/cover;
   position: absolute;
@@ -655,7 +671,17 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.08;
+  opacity: 0.12;
+} */
+
+.works__background {
+  background: url(img/work-1.jpeg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
 }
 
 .works__container {

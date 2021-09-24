@@ -223,7 +223,6 @@ const elProgress = document.getElementById('home-progress')
 let elProgressText = document.getElementById('home-progress-text')
 
 const getScrollPercentage = () => {
-  console.log(elHome.scrollHeight, window.scrollY);
   return (( window.scrollY ) / (elHome.scrollHeight) * 100)
 }
 

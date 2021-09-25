@@ -27,4 +27,5 @@ const t2 = gsap
         },
     })
 
-t2.from('.works__background', {transform: "scale(1.5)"})
+t2.from('.works__background', { transform: "scale(1.5)" })
+t2.from('.works__image', { opacity: 0, "margin-top": "-50px", transition: "all .2s ease-in", stagger: 0.25 })
